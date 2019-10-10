@@ -108,6 +108,10 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	icon_state = "pda-tox"
 	ttone = "boom"
 
+/obj/item/device/pda/xenobio
+	default_cartridge = /obj/item/weapon/cartridge/signal/science
+	icon_state = "pda-xenobio"
+
 /obj/item/device/pda/clown
 	default_cartridge = /obj/item/weapon/cartridge/clown
 	icon_state = "pda-clown"
@@ -219,9 +223,13 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	default_cartridge = /obj/item/weapon/cartridge/chemistry
 	icon_state = "pda-chem"
 
-/obj/item/device/pda/geneticist
+/obj/item/device/pda/psychiatrist
 	default_cartridge = /obj/item/weapon/cartridge/medical
-	icon_state = "pda-gene"
+	icon_state = "pda-psych"
+
+/obj/item/device/pda/paramedic
+	default_cartridge = /obj/item/weapon/cartridge/medical
+	icon_state = "pda-paramedic"
 
 /obj/item/device/pda/merchant
 	icon_state = "pda-chef"
@@ -1259,7 +1267,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if(user)
 		to_chat(user, "<span class='notice'>Card scanned.</span>")
 	try_sort_pda_list()
-		
+
 /obj/item/device/pda/attack(mob/living/C as mob, mob/living/user as mob)
 	if (istype(C, /mob/living/carbon))
 		switch(scanmode)

@@ -34,7 +34,7 @@
 	shoes = /obj/item/clothing/shoes/brown
 	l_ear = /obj/item/device/radio/headset/heads/rd
 	pda = /obj/item/device/pda/heads/rd
-	id = /obj/item/weapon/card/id/silver
+	id = /obj/item/weapon/card/id/navy
 	l_hand = /obj/item/weapon/clipboard
 
 	backpack = /obj/item/weapon/storage/backpack/toxins
@@ -104,6 +104,7 @@
 /datum/outfit/job/scientist/xenobiologist
 	name = "Xenobiologist"
 	jobtype = /datum/job/xenobiologist
+	pda = /obj/item/device/pda/xenobio
 
 /datum/job/roboticist
 	title = "Roboticist"

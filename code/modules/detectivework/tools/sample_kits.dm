@@ -59,6 +59,7 @@
 	icon = 'icons/obj/card.dmi'
 	icon_state = "fingerprint0"
 	item_state = "paper"
+	drop_sound = 'sound/items/drop/paper.ogg'
 
 /obj/item/weapon/sample/print/attack_self(var/mob/user)
 	if(evidence && evidence.len)

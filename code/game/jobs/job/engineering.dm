@@ -35,7 +35,7 @@
 	head = /obj/item/clothing/head/hardhat/white
 	belt = /obj/item/weapon/storage/belt/utility/full
 	pda = /obj/item/device/pda/heads/ce
-	id = /obj/item/weapon/card/id/silver
+	id = /obj/item/weapon/card/id/navy
 	shoes = /obj/item/clothing/shoes/workboots
 	l_ear = /obj/item/device/radio/headset/heads/ce
 

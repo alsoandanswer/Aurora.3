@@ -281,14 +281,16 @@ var/const/NO_EMAG_ACT = -50
 		to_chat(usr, "A ticker indicates the card has [mining_points] ore redemption points available.")
 	return
 
-/obj/item/weapon/card/id/silver
-	name = "identification card"
-	desc = "A silver card which shows honour and dedication."
-	icon_state = "silver"
-	item_state = "silver_id"
+/obj/item/weapon/card/id/grey
+	icon_state = "grey"
+	item_state = "grey_id"
+
+/obj/item/weapon/card/id/navy
+	desc = "A navy card which shows honour and dedication."
+	icon_state = "navy"
+	item_state = "navy_id"
 
 /obj/item/weapon/card/id/gold
-	name = "identification card"
 	desc = "A golden card which shows power and might."
 	icon_state = "gold"
 	item_state = "gold_id"

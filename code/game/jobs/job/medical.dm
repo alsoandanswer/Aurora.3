@@ -36,7 +36,7 @@
 	shoes = /obj/item/clothing/shoes/brown
 	l_ear = /obj/item/device/radio/headset/heads/cmo
 	pda = /obj/item/device/pda/heads/cmo
-	id = /obj/item/weapon/card/id/silver
+	id = /obj/item/weapon/card/id/navy
 	l_hand = /obj/item/weapon/storage/firstaid/adv
 
 	backpack = /obj/item/weapon/storage/backpack/medic
@@ -188,7 +188,7 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/laceup
 	l_ear = /obj/item/device/radio/headset/headset_med
-	pda =  /obj/item/device/pda/chemist
+	pda =  /obj/item/device/pda/psychiatrist
 
 /datum/outfit/job/psychiatrist/psycho
 	name = "Psychologist"
@@ -229,7 +229,7 @@
 	l_hand = /obj/item/weapon/storage/firstaid/adv
 	r_hand = /obj/item/weapon/reagent_containers/hypospray
 	belt = /obj/item/weapon/storage/belt/medical/emt
-	pda =  /obj/item/device/pda/medical
+	pda =  /obj/item/device/pda/paramedic
 
 	backpack = /obj/item/weapon/storage/backpack/medic
 	satchel = /obj/item/weapon/storage/backpack/satchel_med
