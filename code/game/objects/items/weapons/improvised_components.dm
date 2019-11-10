@@ -39,6 +39,14 @@
 		user.put_in_hands(finished)
 		return
 
+/obj/item/weapon/material/butterflycomb
+	name = "come blade"
+	desc = "A comb blade. Unusable as a comb without a grip."
+	icon = 'icons/obj/weapons_build.dmi'
+	icon_state = "comb_blade"
+	force_divisor = 0.1
+	thrown_force_divisor = 0.1
+
 /obj/item/weapon/material/wirerod
 	name = "wired rod"
 	desc = "A rod with some wire wrapped around the top. It'd be easy to attach something to the top bit."
