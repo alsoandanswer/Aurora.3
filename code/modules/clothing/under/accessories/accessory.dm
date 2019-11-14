@@ -328,6 +328,12 @@
 	icon_state = "white_heart"
 	overlay_state = "white_heart"
 
+/obj/item/clothing/accessory/medal/bloodbadge
+	name = "blood donor's badge"
+	desc = "A flimsy plastic badge to signify that someone's donated blood."
+	icon_state = "blood-badge"
+	drop_sound = 'sound/items/drop/card.ogg'
+
 /obj/item/clothing/accessory/suspenders
 	name = "suspenders"
 	desc = "They suspend the illusion of the mime's play."

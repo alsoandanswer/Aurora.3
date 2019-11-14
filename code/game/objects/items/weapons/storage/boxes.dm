@@ -761,6 +761,11 @@
 	desc = "A box full of tau ceti foreign legion pamphlets."
 	starts_with = list(/obj/item/weapon/book/manual/tcfl_pamphlet = 6)
 
+/obj/item/weapon/storage/box/bloodbadge
+	name = "blood donation badge box"
+	desc = "A box of cheap, plastic badges to make people feel good about donating blood."
+	starts_with = list(/obj/item/clothing/accessory/medal/bloodbadge = 12)
+
 /obj/item/weapon/storage/box/sharps
 	name = "sharps disposal box"
 	desc = "A plastic box for disposal of used needles and other sharp, potentially-contaminated tools. There is a large biohazard sign on the front."
