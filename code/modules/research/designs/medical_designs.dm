@@ -17,10 +17,10 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 200)
 	build_path = /obj/item/device/healthanalyzer
 	sort_string = "MBCAF"
-	
+
 /datum/design/item/medical/adv_health_analyzer/
 	name = "Advanced Health Analyzer"
-	desc = "An advanced hand-held body scanner able to accurately distinguish vital signs of the subject. Now in gold!"
+	desc = "An advanced hand-held body scanner able to accurately distinguish vital signs of the subject."
 	id = "adv_health_analyzer"
 	req_tech = list(TECH_MAGNET = 3, TECH_BIO = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 250)

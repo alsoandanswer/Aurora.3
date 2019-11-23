@@ -16,6 +16,7 @@
 	w_class = 2
 	flags = OPENCONTAINER
 	unacidable = 1 //glass doesn't dissolve in acid
+	drop_sound = 'sound/items/drop/glass.ogg'
 
 	var/label_text = ""
 
@@ -77,7 +78,6 @@
 	item_state = "beaker"
 	center_of_mass = list("x" = 15,"y" = 11)
 	matter = list("glass" = 500)
-	drop_sound = 'sound/items/drop/glass.ogg'
 
 /obj/item/reagent_containers/glass/beaker/Initialize()
 	. = ..()
