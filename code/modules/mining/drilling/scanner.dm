@@ -2,14 +2,14 @@
 	name = "ore detector"
 	desc = "A complex device used to locate ore deep underground."
 	icon = 'icons/obj/device.dmi'
-	icon_state = "forensic0-old" //GET A BETTER SPRITE.
+	icon_state = "oredetector"
 	item_state = "electronic"
 	origin_tech = list(TECH_MAGNET = 1, TECH_ENGINEERING = 1)
 	matter = list(DEFAULT_WALL_MATERIAL = 150)
 
 /obj/item/mining_scanner/attack_self(mob/user as mob)
 	to_chat(user, "You begin sweeping \the [src] about, scanning for metal deposits.")
-
+	flick("[icon_state]_d", src)
 	if(!do_after(user, 50))
 		return
 
@@ -35,7 +35,7 @@
 				if("phoron", "osmium", "hydrogen")				ore_type = "exotic matter"
 
 			if(ore_type) metals[ore_type] += T.resources[metal]
-
+	flick("[icon_state]_s", src)
 	to_chat(user, "\icon[src] <span class='notice'>The scanner beeps and displays a readout.</span>")
 
 	for(var/ore_type in metals)
