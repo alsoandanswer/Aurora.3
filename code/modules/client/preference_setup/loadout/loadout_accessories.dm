@@ -202,12 +202,15 @@
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/accessory/chaps
-	display_name = "chaps, brown"
+	display_name = "chaps selection"
 	path = /obj/item/clothing/accessory/chaps
 
-/datum/gear/accessory/chaps/black
-	display_name = "chaps, black"
-	path = /obj/item/clothing/accessory/chaps/black
+/datum/gear/accessory/scarf/New()
+	..()
+	var/chaps = list()
+	scarfs["brown chaps"] = /obj/item/clothing/accessory/chaps
+	scarfs["black chaps"] = /obj/item/clothing/accessory/chaps/black
+	gear_tweaks += new/datum/gear_tweak/path(chaps)
 
 /datum/gear/accessory/dogtags
 	display_name = "dogtags"
