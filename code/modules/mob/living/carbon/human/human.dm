@@ -1276,6 +1276,16 @@
 
 /mob/living/carbon/human/clean_blood(var/clean_feet)
 	.=..()
+	if(gloves)
+		if(gloves.clean_blood())
+			update_inv_gloves(1)
+		gloves.germ_level = 0
+	else
+		if(!isnull(bloody_hands))
+			bloody_hands = null
+			update_inv_gloves(1)
+		germ_level = 0
+
 	gunshot_residue = null
 	if(clean_feet && !shoes)
 		feet_blood_color = null

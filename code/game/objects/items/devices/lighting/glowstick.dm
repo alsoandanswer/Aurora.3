@@ -9,7 +9,7 @@
 	item_state = "glowstick"
 	uv_intensity = 255
 	light_wedge = LIGHT_OMNI
-	activation_sound = null
+	activation_sound = 'sound/effects/glowstick.ogg'
 
 /obj/item/device/flashlight/flare/glowstick/New()
 	. = ..()

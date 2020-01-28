@@ -43,7 +43,7 @@
 			if (fullness > (550 * (1 + M.overeatduration / 2000)))
 				to_chat(M, "You cannot force anymore food down!")
 				return
-			M.visible_message("<span class='notice'>\The [user] eats some [loaded] from \the [src].</span>")
+			M.visible_message("<span class='notice'>\The [user] eats some of \the [loaded] using \the [src].</span>")
 		else
 			if (fullness > (550 * (1 + M.overeatduration / 2000)))
 				to_chat(M, "You cannot force anymore food down their throat!")
@@ -51,9 +51,12 @@
 			user.visible_message("<span class='warning'>\The [user] begins to feed \the [M]!</span>")
 			if(!(M.can_force_feed(user, loaded) && do_mob(user, M, 5 SECONDS)))
 				return
-			M.visible_message("<span class='notice'>\The [user] feeds some [loaded] to \the [M] with \the [src].</span>")
+			M.visible_message("<span class='notice'>\The [user] feeds some \the [loaded] to \the [M] with \the [src].</span>")
 		reagents.trans_to_mob(M, reagents.total_volume, CHEM_INGEST)
-		playsound(M.loc,'sound/items/eatfood.ogg', rand(10,40), 1)
+		if(loaded)
+			playsound(user.loc, 'sound/items/drink.ogg', rand(10, 50), 1)
+		else
+			playsound(user.loc, 'sound/items/eatfood.ogg', rand(10, 50), 1)
 		cut_overlays()
 		return
 	else

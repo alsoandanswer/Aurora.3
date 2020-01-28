@@ -203,7 +203,8 @@
 
 	to_chat(H, "<span class='info'>You press the emergency release, ejecting \the [tank] from your suit.</span>")
 	tank.canremove = 1
-	H.drop_from_inventory(tank)
+	H.drop_from_inventory(tank, src)
+	H.put_in_hands(tank)
 	src.tank = null
 
 /obj/item/clothing/suit/space/void/attack_self()
@@ -245,6 +246,7 @@
 			to_chat(user, "\The [src] already has a helmet installed.")
 		else
 			to_chat(user, "You attach \the [W] to \the [src]'s helmet mount.")
+			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 			user.drop_from_inventory(W,src)
 			src.helmet = W
 		return
@@ -253,6 +255,7 @@
 			to_chat(user, "\The [src] already has magboots installed.")
 		else
 			to_chat(user, "You attach \the [W] to \the [src]'s boot mounts.")
+			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 			user.drop_from_inventory(W,src)
 			boots = W
 		return
@@ -263,6 +266,7 @@
 			to_chat(user, "\The [W] cannot be inserted into \the [src]'s storage compartment.")
 		else
 			to_chat(user, "You insert \the [W] into \the [src]'s storage compartment.")
+			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 			user.drop_from_inventory(W,src)
 			tank = W
 		return
