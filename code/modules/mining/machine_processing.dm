@@ -249,8 +249,8 @@
 	P.add_overlay(stampoverlay)
 	P.stamps += "<HR><i>This paper has been stamped by the NT Ore Processing System.</i>"
 
-	playsound(loc, "sound/bureaucracy/print.ogg", 75, 1)
 	user.visible_message("\The [src] spits out a piece of paper.")
+	playsound(loc, "sound/bureaucracy/print_short.ogg", 75, 1)
 
 	// reset
 	output_mats = list()

@@ -70,6 +70,7 @@
 
 		suppressing = !suppressing
 		user.visible_message("<span class='notice'>\The [user] switches [suppressing ? "on" : "off"] \the [src]'s neural suppressor.</span>")
+		playsound(src.loc, "switchsounds", 50, 1)
 
 /obj/machinery/optable/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(air_group || (height==0)) return 1
