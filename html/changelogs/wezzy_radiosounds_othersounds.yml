@@ -45,3 +45,4 @@ changes:
   - soundadd: "Attaching stuff to voidsuits now gives audible feedback."
   - soundadd: "Switching on the neural supressor makes a switch sound."
   - soundadd: "Printing stuff from the autopsy scanner makes a noise."
+  - soundadd: "New ambience sound."
