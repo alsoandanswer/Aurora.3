@@ -57,7 +57,7 @@
 		shatter()
 	else
 		if(sound_effect)
-			playsound(loc, 'sound/effects/Glasshit.ogg', 100, 1)
+			playsound(loc, 'sound/effects/glass_hit.ogg', 100, 1)
 		if(health < maxhealth / 4 && initialhealth >= maxhealth / 4)
 			visible_message(span("danger", "[src] looks like it's about to shatter!" ))
 			playsound(loc, "glasscrack", 100, 1)
@@ -186,13 +186,13 @@
 				attack_generic(H,25)
 				return
 
-		playsound(src.loc, 'sound/effects/glassknock.ogg', 90, 1)
+		playsound(src.loc, 'sound/effects/glass_knock.ogg', 90, 1)
 		user.do_attack_animation(src)
 		user.visible_message(span("danger", "\The [user] bangs against \the [src]!"),
 							 span("danger", "You bang against \the [src]!"),
 							"You hear a banging sound.")
 	else
-		playsound(src.loc, 'sound/effects/glassknock.ogg', 60, 1)
+		playsound(src.loc, 'sound/effects/glass_knock.ogg', 60, 1)
 		user.visible_message("[user] knocks on \the [src.name].",
 							"You knock on \the [src.name].",
 							"You hear a knocking sound.")
@@ -205,13 +205,13 @@
 		take_damage(damage)
 	else
 		visible_message(span("notice", "\The [user] bonks \the [src] harmlessly."))
-		playsound(src.loc, 'sound/effects/Glasshit.ogg', 10, 1, -2)
+		playsound(src.loc, 'sound/effects/glass_hit.ogg', 10, 1, -2)
 	user.do_attack_animation(src)
 	return 1
 
 /obj/structure/window/do_simple_ranged_interaction(var/mob/user)
 	visible_message(span("notice", "Something knocks on \the [src]."))
-	playsound(loc, 'sound/effects/Glasshit.ogg', 50, 1)
+	playsound(loc, 'sound/effects/glass_hit.ogg', 50, 1)
 	return TRUE
 
 /obj/structure/window/attackby(obj/item/W as obj, mob/user as mob)
@@ -265,7 +265,7 @@
 				update_nearby_icons()
 				step(src, get_dir(user, src))
 		else
-			playsound(loc, 'sound/effects/Glasshit.ogg', 75, 1)
+			playsound(loc, 'sound/effects/glass_hit.ogg', 75, 1)
 		..()
 	return
 

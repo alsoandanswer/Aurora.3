@@ -119,7 +119,7 @@
 		if ("golfclap")
 			if (!src.restrained())
 				message = "claps, clearly unimpressed."
-				playsound(loc, 'sound/effects/golfclap.ogg', 50, 1)
+				playsound(loc, 'sound/effects/clap_golf.ogg', 50, 1)
 				m_type = 2
 				if(miming)
 					m_type = 1

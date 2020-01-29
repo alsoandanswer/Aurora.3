@@ -171,7 +171,7 @@
 			stat &= ~MAINT
 
 	if (previous_stat != stat && !stat && bulb_is_noisy)
-		playsound(loc, 'sound/effects/lighton.ogg', 65, 1)
+		playsound(loc, 'sound/effects/light_on.ogg', 65, 1)
 
 	previous_stat = stat
 	if(!stat)
@@ -520,7 +520,7 @@
 
 	if(!skip_sound_and_sparks)
 		if(status == LIGHT_OK || status == LIGHT_BURNED)
-			playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
+			playsound(src.loc, 'sound/effects/glass_hit.ogg', 75, 1)
 		if(!stat)
 			spark(src, 3)
 	status = LIGHT_BROKEN

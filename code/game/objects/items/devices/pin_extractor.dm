@@ -8,7 +8,7 @@
 	flags = CONDUCT
 	action_button_name = "Toggle extractor"
 	var/on = 0
-	var/activation_sound = 'sound/effects/lighton.ogg'
+	var/activation_sound = 'sound/effects/light_on.ogg'
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_MAGNET = 4)
 
 

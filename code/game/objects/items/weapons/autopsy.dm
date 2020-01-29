@@ -5,8 +5,8 @@
 /obj/item/autopsy_scanner
 	name = "autopsy scanner"
 	desc = "Extracts information on wounds."
-	icon = 'icons/obj/autopsy_scanner.dmi'
-	icon_state = ""
+	icon = 'icons/obj/device.dmi'
+	icon_state = "autopsyscanner"
 	flags = CONDUCT
 	w_class = 2.0
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
@@ -151,6 +151,7 @@
 
 	for(var/mob/O in viewers(usr))
 		O.show_message("<span class='notice'>\The [src] rattles and prints out a sheet of paper.</span>", 1)
+		playsound(src.loc, 'sound/items/poster_being_created.ogg', 50, 1)
 
 	sleep(10)
 
