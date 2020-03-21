@@ -455,6 +455,13 @@
 	build_path = /obj/item/circuitboard/aicore
 	sort_string = "XAAAA"
 
+/datum/design/circuit/vitals
+	name = "vitals monitor"
+	id = "vitals"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 1)
+	build_path = /obj/item/circuitboard/vitals_monitor
+	sort_string = "XAAAD"
+
 /datum/design/circuit/rtg
 	name = "radioisotope thermoelectric generator"
 	id = "rtg"

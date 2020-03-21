@@ -108,6 +108,11 @@
 	build_path = /obj/machinery/computer/operating
 	origin_tech = list(TECH_DATA = 2, TECH_BIO = 2)
 
+/obj/item/circuitboard/vitals_monitor
+	name = T_BOARD("vitals monitor")
+	build_path = /obj/machinery/computer/vitals_monitor
+	origin_tech = list(TECH_DATA = 2, TECH_BIO = 2)
+
 /obj/item/circuitboard/curefab
 	name = T_BOARD("cure fabricator")
 	build_path = /obj/machinery/computer/curer
