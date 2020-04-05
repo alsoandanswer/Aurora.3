@@ -99,15 +99,6 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|HANDS|LEGS|FEET
 
-/obj/item/clothing/suit/hastur
-	name = "hastur's robes"
-	desc = "Robes not meant to be worn by man"
-	icon_state = "hastur"
-	item_state = "hastur"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
-
 /obj/item/clothing/suit/imperium_monk
 	name = "imperium monk"
 	desc = "Have YOU killed a xenos today?"
@@ -115,7 +106,6 @@
 	item_state = "imperium_monk"
 	body_parts_covered = HEAD|UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/chickensuit
 	name = "chicken suit"
@@ -126,7 +116,6 @@
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
 	siemens_coefficient = 1.5
 
-
 /obj/item/clothing/suit/monkeysuit
 	name = "monkey suit"
 	desc = "A suit that looks like a primate"
@@ -136,7 +125,6 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	siemens_coefficient = 1.5
 
-
 /obj/item/clothing/suit/holidaypriest
 	name = "holiday priest"
 	desc = "This is a nice holiday my son."
@@ -144,7 +132,6 @@
 	item_state = "holidaypriest"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/cardborg
 	name = "cardborg suit"
