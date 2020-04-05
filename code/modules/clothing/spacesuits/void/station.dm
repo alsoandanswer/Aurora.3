@@ -38,13 +38,9 @@
 	brightness_on = 6
 
 /obj/item/clothing/suit/space/void/mining
-	icon_state = "rig-mining"
 	name = "mining voidsuit"
-	item_state_slots = list(
-		slot_l_hand_str = "mining_hardsuit",
-		slot_r_hand_str = "mining_hardsuit"
-	)
 	desc = "A special suit that protects against hazardous, low pressure environments. Has reinforced plating."
+	icon_state = "mining_voidsuit"
 	item_state = "mining_voidsuit"
 	armor = list(melee = 50, bullet = 5, laser = 20,energy = 5, bomb = 55, bio = 100, rad = 20)
 	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/suit_cooling_unit,/obj/item/storage/bag/ore,/obj/item/pickaxe, /obj/item/gun/custom_ka, /obj/item/gun/energy/vaurca/thermaldrill)
@@ -110,14 +106,10 @@
 	light_overlay = "helmet_light_dual"
 
 /obj/item/clothing/suit/space/void/atmos
-	desc = "A special suit that protects against hazardous, low pressure environments. Has improved thermal protection and minor radiation shielding."
-	icon_state = "rig-atmos"
 	name = "atmos voidsuit"
+	desc = "A special suit that protects against hazardous, low pressure environments. Has improved thermal protection and minor radiation shielding."
+	icon_state = "atmos_voidsuit"
 	item_state = "atmos_voidsuit"
-	item_state_slots = list(
-		slot_l_hand_str = "atmos_hardsuit",
-		slot_r_hand_str = "atmos_hardsuit"
-	)
 	armor = list(melee = 40, bullet = 5, laser = 20,energy = 5, bomb = 35, bio = 100, rad = 50)
 	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/suit_cooling_unit,/obj/item/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/pickaxe,/obj/item/material/twohanded/fireaxe,/obj/item/rfd/construction)
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE + 10000 // It is a suit designed for fire, enclosed

@@ -70,7 +70,7 @@
 /obj/item/clothing/head/helmet/space/emergency
 	name = "emergency space helmet"
 	icon_state = "emergencyhelm"
-	item_state = "emergencyhelm"
+	item_state = "syndicate-helm-orange"
 	desc = "A simple helmet with a built in light, smells like mothballs."
 	flash_protection = FLASH_PROTECTION_NONE
 

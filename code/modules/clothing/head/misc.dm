@@ -304,17 +304,15 @@
 	name = "natural philosopher's wig"
 	desc = "A stylish monstrosity unearthed from Earth's Renaissance period. With this most distinguish'd wig, you'll be ready for your next soiree!"
 	icon_state = "philosopher_wig"
-	item_state_slots = list(
-		slot_l_hand_str = "pwig",
-		slot_r_hand_str = "pwig"
-		)
+	item_state = "pwig"
 	flags_inv = BLOCKHAIR
 	siemens_coefficient = 2.0 //why is it so conductive?!
 
 /obj/item/clothing/head/orangebandana //themij: Taryn Kifer
 	name = "orange bandana"
 	desc = "An orange piece of cloth, worn on the head."
-	icon_state = "orange_bandana"
+	icon_state = "orangebandana"
+	item_state = "orangebandana"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/hijab //It might've taken a year but here's your Hijab's, Dea.

@@ -22,10 +22,7 @@
 	name = "collectable xenomorph helmet!"
 	desc = "Hiss hiss hiss!"
 	icon_state = "xenom"
-	item_state_slots = list(
-		slot_l_hand_str = "xenos_helm",
-		slot_r_hand_str = "xenos_helm"
-		)
+	item_state = "xenos_helm"
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/head/collectable/chef
@@ -129,3 +126,4 @@
 	name = "collectable SWAT helmet"
 	desc = "Now you can be in the Deathsquad too!"
 	icon_state = "swat"
+	item_state = "swat"

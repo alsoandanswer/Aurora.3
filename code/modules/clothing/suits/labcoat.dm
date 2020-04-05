@@ -75,14 +75,6 @@
 	icon_closed = "labcoat_cmoalt2"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 60, rad = 0)
 
-/obj/item/clothing/suit/storage/toggle/labcoat/mad
-	name = "the mad's labcoat"
-	desc = "It makes you look capable of konking someone on the noggin and shooting them into space."
-	icon_state = "labgreen_open"
-	item_state = "labgreen"
-	icon_open = "labgreen_open"
-	icon_closed = "labgreen"
-
 /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	name = "geneticist labcoat"
 	desc = "A suit that protects against minor chemical spills. Has a blue stripe on the shoulder."

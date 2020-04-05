@@ -11,7 +11,7 @@
 /obj/item/clothing/suit/space/syndicate
 	name = "red space suit"
 	icon_state = "syndicate"
-	item_state = "space_suit_syndicate"
+	item_state = "syndicate"
 	desc = "A crimson spacesuit sporting clean lines and durable plating. Robust, reliable, and slightly suspicious."
 	w_class = 3
 	allowed = list(/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/melee/energy/sword,/obj/item/handcuffs,/obj/item/tank/emergency_oxygen)
@@ -125,8 +125,7 @@
 /obj/item/clothing/suit/space/syndicate/black/orange
 	name = "black and orange space suit"
 	icon_state = "syndicate-black-orange"
-	item_state = "syndicate-black"
-
+	item_state = "syndicate-black-orange"
 
 //Black-red syndicate space suit
 /obj/item/clothing/head/helmet/space/syndicate/black/red
@@ -148,4 +147,4 @@
 /obj/item/clothing/suit/space/syndicate/black/engie
 	name = "black engineering space suit"
 	icon_state = "syndicate-black-engie"
-	item_state = "syndicate-black"
+	item_state = "syndicate-black-engie"
