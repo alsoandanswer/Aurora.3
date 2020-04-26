@@ -24,7 +24,7 @@
 	siemens_coefficient = 1.0
 
 /obj/item/clothing/head/wizard/marisa
-	name = "witch Hat"
+	name = "witch hat"
 	desc = "Strange-looking hat-wear, makes you want to cast fireballs."
 	icon_state = "marisa"
 

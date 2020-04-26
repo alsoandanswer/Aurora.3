@@ -178,7 +178,6 @@
 	armor = list(melee = 62, bullet = 50, laser = 50,energy = 35, bomb = 10, bio = 2, rad = 0)
 	siemens_coefficient = 0.35
 
-
 /obj/item/clothing/head/helmet/augment
 	name = "augment array"
 	desc = "A helmet with optical and cranial augments coupled to it."
@@ -248,10 +247,6 @@
 	name = "emergency response team helmet"
 	desc = "An in-atmosphere helmet worn by members of the Emergency Response Team. Protects the head from impacts."
 	icon_state = "erthelmet_cmd"
-	item_state_slots = list(
-		slot_l_hand_str = "syndicate-helm-green",
-		slot_r_hand_str = "syndicate-helm-green"
-		)
 	armor = list(melee = 62, bullet = 50, laser = 50,energy = 35, bomb = 10, bio = 2, rad = 0)
 	siemens_coefficient = 0.35
 

@@ -1,11 +1,7 @@
 /obj/item/clothing/head/soft
-	name = "cargo cap"
-	desc = "It's a peaked cap in a tasteless yellow color."
-	icon_state = "cargosoft"
-	item_state_slots = list(
-		slot_l_hand_str = "helmet", //probably a placeholder
-		slot_r_hand_str = "helmet"
-		)
+	name = "cap"
+	desc = "It's a peaked cap in a tasteless color."
+	icon_state = "mime_soft"
 	var/flipped = 0
 	siemens_coefficient = 0.9
 
@@ -54,10 +50,10 @@
 	desc = "It's a peaked cap in a tasteless orange color."
 	icon_state = "orangesoft"
 
-/obj/item/clothing/head/soft/mime
+/obj/item/clothing/head/soft/white
 	name = "white cap"
 	desc = "It's a peaked cap in a tasteless white color."
-	icon_state = "mimesoft"
+	icon_state = "whitesoft"
 
 /obj/item/clothing/head/soft/purple
 	name = "purple cap"

@@ -118,10 +118,6 @@
 	icon_state = "redcoat"
 	desc = "<i>'I guess it's a redhead.'</i>"
 
-/obj/item/clothing/head/mailman
-	name = "station cap"
-	icon_state = "mailman"
-	desc = "<i>Choo-choo</i>!"
 
 /obj/item/clothing/head/plaguedoctorhat
 	name = "plague doctor's hat"
@@ -155,14 +151,6 @@
 	item_state = "cueball"
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
-
-/obj/item/clothing/head/greenbandana
-	name = "green bandana"
-	desc = "It's a green bandana with some fine nanotech lining."
-	icon_state = "greenbandana"
-	item_state = "greenbandana"
-	flags_inv = 0
-	body_parts_covered = 0
 
 /obj/item/clothing/head/cardborg
 	name = "cardborg helmet"
@@ -222,6 +210,18 @@
 	name = "pirate bandana"
 	desc = "Yarr."
 	icon_state = "bandana"
+	flags_inv = 0
+	body_parts_covered = 0
+
+/obj/item/clothing/head/bandana/green
+	name = "green bandana"
+	desc = "It's a green bandana with some fine nanotech lining."
+	icon_state = "bandana_green"
+
+/obj/item/clothing/head/bandana/orange
+	name = "orange bandana"
+	desc = "It's a orange bandana with some fine nanotech lining."
+	icon_state = "bandana_orange"
 
 /obj/item/clothing/head/bowler
 	name = "bowler-hat"
@@ -310,12 +310,6 @@
 		)
 	flags_inv = BLOCKHAIR
 	siemens_coefficient = 2.0 //why is it so conductive?!
-
-/obj/item/clothing/head/orangebandana //themij: Taryn Kifer
-	name = "orange bandana"
-	desc = "An orange piece of cloth, worn on the head."
-	icon_state = "orange_bandana"
-	body_parts_covered = 0
 
 /obj/item/clothing/head/hijab //It might've taken a year but here's your Hijab's, Dea.
 	name = "hijab"

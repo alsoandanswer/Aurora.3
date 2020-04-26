@@ -15,8 +15,8 @@
 /datum/gear/head/bandana/New()
 	..()
 	var/bandanas = list()
-	bandanas["green bandana"] = /obj/item/clothing/head/greenbandana
-	bandanas["orange bandana"] = /obj/item/clothing/head/orangebandana
+	bandanas["green bandana"] = /obj/item/clothing/head/bandana_green
+	bandanas["orange bandana"] = /obj/item/clothing/head/banana_orange
 	bandanas["pirate bandana"] = /obj/item/clothing/head/bandana
 	gear_tweaks += new/datum/gear_tweak/path(bandanas)
 
@@ -28,17 +28,17 @@
 /datum/gear/head/cap/New()
 	..()
 	var/caps = list()
-	caps["blue cap"] = /obj/item/clothing/head/soft/blue
-	caps["flat cap"] = /obj/item/clothing/head/flatcap
-	caps["green cap"] = /obj/item/clothing/head/soft/green
-	caps["grey cap"] = /obj/item/clothing/head/soft/grey
+	caps["red cap"] = /obj/item/clothing/head/soft/red
 	caps["orange cap"] = /obj/item/clothing/head/soft/orange
+	caps["yellow cap"] = /obj/item/clothing/head/soft/yellow
+	caps["green cap"] = /obj/item/clothing/head/soft/green
+	caps["blue cap"] = /obj/item/clothing/head/soft/blue
 	caps["purple cap"] = /obj/item/clothing/head/soft/purple
 	caps["rainbow cap"] = /obj/item/clothing/head/soft/rainbow
-	caps["red cap"] = /obj/item/clothing/head/soft/red
-	caps["white cap"] = /obj/item/clothing/head/soft/mime
-	caps["yellow cap"] = /obj/item/clothing/head/soft/yellow
-	caps["mailman cap"] = /obj/item/clothing/head/mailman
+	caps["black cap"] = /obj/item/clothing/head/soft/black
+	caps["grey cap"] = /obj/item/clothing/head/soft/grey
+	caps["white cap"] = /obj/item/clothing/head/soft/white
+	caps["flat cap"] = /obj/item/clothing/head/flatcap
 	gear_tweaks += new/datum/gear_tweak/path(caps)
 
 /datum/gear/head/beret
