@@ -3,7 +3,7 @@
 	filedesc = "NTSL2+ Interpreter"
 	extended_desc = "This program is used to run NTSL2+ programs."
 	program_icon_state = "generic"
-	size = 2
+	size = 8
 	requires_ntnet = TRUE
 	available_on_ntnet = TRUE
 
@@ -14,7 +14,7 @@
 
 /datum/computer_file/program/ntsl2_interpreter/process_tick()
 	if(istype(running))
-		running.cycle(5000)
+		running.cycle(30000)
 	..()
 
 /datum/computer_file/program/ntsl2_interpreter/kill_program()
@@ -50,8 +50,8 @@
 			if(copytext(topc, 1, 2) == "?")
 				topc = copytext(topc, 2) + "?" + input("", "Enter Data")
 			running.topic(topc)
-			running.cycle(300)
-		. = TRUE
+			running.cycle(5000)
+		. = 1
 
 	if(href_list["PRG_refresh"])
 		. = TRUE
