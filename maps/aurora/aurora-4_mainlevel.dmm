@@ -19727,7 +19727,6 @@
 /obj/machinery/turretid/lethal{
 	ailock = 1;
 	check_synth = 1;
-	control_area = "\improper Vault";
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Vault lethal turret control";
 	pixel_x = -28;
@@ -64115,7 +64114,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "hqT" = (
-/obj/item/clothing/head/soft/mime,
+/obj/item/clothing/head/soft/white,
 /obj/item/clothing/mask/gas/mime,
 /obj/item/clothing/shoes/mime,
 /obj/item/clothing/under/mime,
