@@ -1090,12 +1090,11 @@ var/list/total_extraction_beacons = list()
 		for(var/obj/item/ore/O in orange(7, user))
 			if(limit <= 0)
 				break
-			single_spark(get_turf(O))
 			do_teleport(O, user, 0)
 			limit -= 1
 			CHECK_TICK
 	else
-		to_chat(user, SPAN_NOTICE("The ore summoner is in the middle of some calibrations."))
+		to_chat(user, SPAN_WARNING("The ore summoner is recalibrating."))
 		return FALSE
 
 /******************************Sculpting*******************************/
