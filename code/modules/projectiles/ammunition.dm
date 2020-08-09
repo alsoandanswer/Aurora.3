@@ -23,7 +23,7 @@
 	. = ..()
 	if(ispath(projectile_type))
 		BB = new projectile_type(src)
-	randpixel_xy()
+	update_icon()
 
 //removes the projectile from the ammo casing
 /obj/item/ammo_casing/proc/expend()
@@ -69,6 +69,27 @@
 /obj/item/ammo_casing/update_icon()
 	if(spent_icon && !BB)
 		icon_state = spent_icon
+	pixel_x = initial(pixel_x)
+	pixel_y = initial(pixel_y)
+	var/matrix/tf = matrix()
+	if(istype(loc, /obj/item/storage))
+		tf.Turn(-90) //Vertical for storing compactly
+		tf.Translate(-3,0) //Could do this with pixel_x but let's just update the appearance once.
+	transform = tf
+
+/obj/item/ammo_casing/resolve_attackby()
+	if(istype(loc,/obj/structure/table)) //when placed on table, no more randpixel
+		pixel_x = initial(pixel_x)
+		pixel_y = initial(pixel_y)
+	..()
+
+/obj/item/ammo_casing/pickup(mob/user)
+	..()
+	update_icon()
+
+/obj/item/ammo_casing/dropped(mob/user)
+	..()
+	randpixel_xy()
 
 /obj/item/ammo_casing/examine(mob/user)
 	..()
