@@ -211,6 +211,8 @@
 	var/obj/item/store	//What's in the book?
 	drop_sound = 'sound/items/drop/book.ogg'
 	pickup_sound = 'sound/items/pickup/book.ogg'
+	onopen_sound = 'sound/bureaucracy/bookopen.ogg'
+	onclose_sound = 'sound/bureaucracy/bookclose.ogg'
 
 /obj/item/book/attack_self(var/mob/user as mob)
 	if(carved)
@@ -225,9 +227,8 @@
 	if(src.dat)
 		user << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
 		user.visible_message("[user] opens a book titled \"[src.title]\" and begins reading intently.")
-		playsound(loc, 'sound/bureaucracy/bookopen.ogg', 50, 1)
-		onclose(user, "book")
-		onclose(playsound(loc, 'sound/bureaucracy/bookclose.ogg', 50, 1))
+		playsound(user, onopen_sound, 50, 1, -5)
+		onclose(user, "book") // originally supposed to play the onclose_sound but i'm not touching nanoUI code with a 10 foot pole
 	else
 		to_chat(user, "This book is completely blank!")
 

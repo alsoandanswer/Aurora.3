@@ -13,15 +13,14 @@
 	w_class = ITEMSIZE_SMALL // POKKET - geeves
 	var/mob/affecting = null
 	use_sound = 'sound/bureaucracy/bookopen.ogg'
-	drop_sound = 'sound/bureaucracy/bookclose.ogg'
+	close_sound = 'sound/bureaucracy/bookclose.ogg'
+	drop_sound = 'sound/items/drop/book.ogg'
+	pickup_sound = 'sound/items/pickup/book.ogg'
 
 /obj/item/storage/bible/booze
-	name = "bible"
-	desc = "A holy item, containing the written words of a religion."
-	icon_state = "bible"
 	starts_with = list(
 		/obj/item/reagent_containers/food/drinks/bottle/small/beer = 2,
-		/obj/item/spacecash = 3
+		/obj/item/spacecash/c50 = 3
 	)
 
 /obj/item/storage/bible/afterattack(atom/A, mob/user as mob, proximity)
@@ -37,10 +36,6 @@
 				A.reagents.del_reagent(/datum/reagent/water)
 				A.reagents.add_reagent(/datum/reagent/water/holywater, water2holy)
 
-/obj/item/storage/bible/attackby(obj/item/W as obj, mob/user as mob)
-	if(src.use_sound)
-		playsound(src.loc, src.use_sound, 50, 1, -5)
-	..()
 
 /obj/item/storage/bible/proc/Set_Religion(mob/user)
 	if(use_check(user))

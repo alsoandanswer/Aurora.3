@@ -36,10 +36,11 @@
 
 /obj/item/storage/box/fancy/AltClick(mob/user)
 	opened = !opened
-	playsound(src.loc, src.use_sound, 50, 0, -5)
 	if(closable && !opened)
 		icon_state = "[initial(icon_state)]" // closed
 		cut_overlays()
+		if(!close_sound)
+			playsound(src.loc, src.use_sound, 50, 0, -5)
 		close(user)
 		return 1
 	update_icon()

@@ -57,6 +57,10 @@
 	///Sound uses when dropping the item, or when its thrown.
 	var/drop_sound = /decl/sound_category/generic_drop_sound // drop sound - this is the default
 
+	//used for when an item spawns a UI window that can be opened and closed and is supposed to make a noise i guess
+	var/onopen_sound
+	var/onclose_sound
+
 	//Item_state definition moved to /obj
 	//var/item_state = null // Used to specify the item state for the on-mob overlays.
 	var/item_state_slots //overrides the default item_state for particular slots.

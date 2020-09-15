@@ -37,7 +37,10 @@
 	var/allow_quick_empty	//Set this variable to allow the object to have the 'empty' verb, which dumps all the contents on the floor.
 	var/allow_quick_gather	//Set this variable to allow the object to have the 'toggle mode' verb, which quickly collects all items from a tile.
 	var/collection_mode = 1  //0 = pick one at a time, 1 = pick all on tile
+
 	var/use_sound = /decl/sound_category/rustle_sound	//sound played when used. null for no sound.
+	var/close_sound = null // ditto as above i guess
+
 	var/list/starts_with // for pre-filled items
 	var/empty_delay = 0 SECOND // time it takes to empty bag. this is multiplies by number of objects stored
 
@@ -138,7 +141,7 @@
 	LAZYREMOVE(is_seeing, user)
 
 /obj/item/storage/proc/open(mob/user as mob)
-	if (use_sound)
+	if(use_sound)
 		playsound(src.loc, src.use_sound, 50, 0, -5)
 
 	orient2hud(user)
@@ -147,6 +150,8 @@
 	show_to(user)
 
 /obj/item/storage/proc/close(mob/user as mob)
+	if(close_sound)
+		playsound(src.loc, src.close_sound, 50, 0, -5)
 	hide_from(user)
 	user.s_active = null
 	return
