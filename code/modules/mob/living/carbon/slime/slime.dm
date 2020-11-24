@@ -5,7 +5,7 @@
 	pass_flags = PASSTABLE
 	var/is_adult = 0
 	speak_emote = list("chirps")
-	mob_size = 4
+	mob_size = MOB_TINY
 	composition_reagent = /datum/reagent/slimejelly
 	layer = 5
 	maxHealth = 150
