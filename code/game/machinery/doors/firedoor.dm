@@ -264,8 +264,8 @@
 		var/obj/item/weldingtool/WT = C
 		if(WT.isOn())
 			user.visible_message(
-				SPAN_WARNING("[user] begins welding [src] [welded ? "open" : "shut"]."),
-				SPAN_NOTICE("You begin welding [src] [welded ? "open" : "shut"]."),
+				SPAN_WARNING("[user] begins welding [src] [blocked ? "open" : "shut"]."),
+				SPAN_NOTICE("You begin welding [src] [blocked ? "open" : "shut"]."),
 				SPAN_ITALIC("You hear a welding torch on metal.")
 			)
 			playsound(src, 'sound/items/welder.ogg', 50, 1)
