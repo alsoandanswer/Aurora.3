@@ -102,7 +102,10 @@
 
 /obj/structure/closet/crate/Move(var/turf/destination, dir)
 	if(..())
-		if (locate(/obj/structure/table) in destination)
+		if(locate(/obj/structure/table || /obj/structure/plasticflaps || /obj/structure/curtain) in destination)
+			if(vis_contents)
+				end_door_animation() // force the door animation to end to stop fuckery from happening
+		if(locate(/obj/structure/table) in destination)
 			if(locate(/obj/structure/table/rack) in destination)
 				set_tablestatus(ABOVE_TABLE)
 			else if(tablestatus != ABOVE_TABLE)
@@ -120,7 +123,6 @@
 /obj/structure/closet/crate/proc/set_tablestatus(var/target)
 	if (tablestatus != target)
 		tablestatus = target
-
 	spawn(3)//Short spawn prevents things popping up where they shouldnt
 		switch (target)
 			if (ABOVE_TABLE)
@@ -182,8 +184,8 @@
 		if (!do_after(user, timeneeded, needhand = TRUE, act_target = src))
 			return FALSE
 		else
-			forceMove(get_turf(table))
 			set_tablestatus(ABOVE_TABLE)
+			forceMove(get_turf(table))
 			return TRUE
 
 /*
@@ -542,7 +544,7 @@
 	var/list/crates_to_use = typesof(/obj/structure/closet/crate) - typesof(/obj/structure/closet/crate/secure/gear_loadout)
 	crates_to_use -= /obj/structure/closet/crate/loot
 	var/icontype = pick(crates_to_use)
-	var/obj/structure/closet/crate/C = new icontype(get_turf(src), TRUE) //TRUE as we do not want the crate to fill(), we will fill it ourselves. 
+	var/obj/structure/closet/crate/C = new icontype(get_turf(src), TRUE) //TRUE as we do not want the crate to fill(), we will fill it ourselves.
 
 	C.name = "unusual container"
 	C.desc = "A mysterious container of unknown origins. What mysteries lie within?"

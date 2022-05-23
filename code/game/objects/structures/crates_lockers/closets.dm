@@ -155,17 +155,18 @@
 	if(!can_open())
 		return 0
 
+	dump_contents()
 	if(climbable)
 		structure_shaken()
 	opened = TRUE
-	dump_contents()
+	if(!dense_when_open)
+		density = FALSE
 	animate_door(FALSE)
 	if(double_doors)
 		animate_door_alt(FALSE)
 	update_icon()
 	playsound(loc, open_sound, open_sound_volume, 0, -3)
-	if(!dense_when_open)
-		density = FALSE
+
 	return 1
 
 /obj/structure/closet/proc/close()
@@ -175,7 +176,6 @@
 		return 0
 
 	var/stored_units = 0
-
 	if(store_misc)
 		stored_units += store_misc(stored_units)
 	if(store_items)
@@ -184,11 +184,6 @@
 		stored_units += store_mobs(stored_units)
 	if(store_structure)
 		stored_units += store_structure(stored_units)
-	opened = FALSE
-	animate_door(TRUE)
-	if(double_doors)
-		animate_door_alt(TRUE)
-	update_icon()
 
 	if(linked_teleporter)
 		if(linked_teleporter.last_use + 600 > world.time)
@@ -200,8 +195,13 @@
 		if(did_teleport)
 			linked_teleporter.last_use = world.time
 
-	playsound(get_turf(src), close_sound, close_sound_volume, 0, -3)
+	opened = FALSE
 	density = initial(density)
+	playsound(loc, close_sound, close_sound_volume, 0, -3)
+	animate_door(TRUE)
+	update_icon()
+	if(double_doors)
+		animate_door_alt(TRUE)
 	return TRUE
 
 //Chem Projector Exception
@@ -534,8 +534,6 @@
 
 	if(!opened)
 		layer = OBJ_LAYER
-		if(welded)
-			add_overlay("[icon_door_overlay]welded")
 		if(!is_animating_door)
 			if(icon_door)
 				add_overlay("[icon_door]_door")
@@ -545,11 +543,13 @@
 				add_overlay("[icon_state]_door")
 				if(double_doors)
 					add_overlay("[icon_state]_door_alt")
+			if(welded)
+				add_overlay("[icon_door_overlay]welded")
 			if(secure)
 				update_secure_overlays()
 		if(secure && secure_lights)
 			update_secure_overlays()
-	else if(opened)
+	else
 		layer = BELOW_OBJ_LAYER
 		if(!is_animating_door)
 			add_overlay("[icon_door_override ? icon_door : icon_state]_open")
