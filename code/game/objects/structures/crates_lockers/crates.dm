@@ -50,7 +50,8 @@
 	var/list/animation_math_list = animation_math["[door_anim_time]-[door_anim_angle]-[azimuth_angle_2]-[radius_2]-[door_hinge]"]
 	for(var/I in 0 to num_steps)
 		var/door_state = I == (closing ? num_steps : 0) ? "[icon_door || icon_state]_door" : animation_math_list[closing ? 2 * num_steps - I : num_steps + I] <= 0 ? "[icon_door_override ? icon_door : icon_state]_back" : "[icon_door || icon_state]_door"
-		var/door_layer = I == (closing ? num_steps : 0) ? ABOVE_MOB_LAYER : animation_math_list[closing ? 2 * num_steps - I : num_steps + I] <= 0 ? FLOAT_LAYER : ABOVE_MOB_LAYER
+//		var/door_layer = I == (closing ? num_steps : 0) ? ABOVE_MOB_LAYER : animation_math_list[closing ? 2 * num_steps - I : num_steps + I] <= 0 ? FLOAT_LAYER : ABOVE_MOB_LAYER
+		var/door_layer = (tablestatus == ABOVE_TABLE ? FLOAT_LAYER : ABOVE_MOB_LAYER)
 		var/matrix/M = get_door_transform(I == (closing ? num_steps : 0) ? 0 : animation_math_list[closing ? num_steps - I : I], I == (closing ? num_steps : 0) ? 1 : animation_math_list[closing ?  2 * num_steps - I : num_steps + I])
 		if(I == 0)
 			door_obj.transform = M
@@ -102,9 +103,6 @@
 
 /obj/structure/closet/crate/Move(var/turf/destination, dir)
 	if(..())
-		if(locate(/obj/structure/table || /obj/structure/plasticflaps || /obj/structure/curtain) in destination)
-			if(vis_contents)
-				end_door_animation() // force the door animation to end to stop fuckery from happening
 		if(locate(/obj/structure/table) in destination)
 			if(locate(/obj/structure/table/rack) in destination)
 				set_tablestatus(ABOVE_TABLE)
